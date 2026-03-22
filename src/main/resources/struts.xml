@@ -1,0 +1,19 @@
+<!DOCTYPE struts PUBLIC
+ "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+ "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+	<!-- เปลี่ยน extension ถ้าไม่ใส่จะ default เป็น action -->
+    <constant name="struts.action.extension" value="do"/>
+    <!-- กรณีแบบหลายนามสกุล -->
+    <!-- <constant name="struts.action.extension" value="do,action"/> -->
+    
+    <package name="default" namespace="/" extends="struts-default">
+
+        <action name="hello" class="com.example.springWithJspAndStruts.action.HelloAction">
+            <result name="success">/WEB-INF/jsp/hello.jsp</result>
+        </action>
+
+    </package>
+</struts>
