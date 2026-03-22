@@ -12,7 +12,8 @@ if [ ! -f "$INI_FILE" ]; then
 fi
 
 # read first line
-APP_FILE=$(head -n 1 "$INI_FILE" | tr -d '\r\n' | xargs)
+#ข้าม comment (#) ข้ามบรรทัดว่าง เอา entry แรกที่ valid จริง
+APP_FILE=$(grep -v '^\s*#' "$INI_FILE" | grep -v '^\s*$' | head -n 1 | xargs)
 
 # check empty
 if [ -z "$APP_FILE" ]; then
