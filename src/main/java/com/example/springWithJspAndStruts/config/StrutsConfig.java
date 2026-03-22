@@ -17,6 +17,7 @@ public class StrutsConfig {
         bean.addUrlPatterns("/*");
         //or ดักเฉพาะ .do เท่านั้น
         //bean.addUrlPatterns("*.do");
+        //bean.addUrlPatterns("*.do", "*.action"); //กรณีหลายอัน
         
         bean.setOrder(1);
         return bean;
