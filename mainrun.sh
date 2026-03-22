@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# cd ไปยัง directory ของ script ตัวเอง
+cd "$(dirname "$0")"
+
 INI_FILE="runapp.ini"
 
 # check file exists
@@ -8,7 +11,7 @@ if [ ! -f "$INI_FILE" ]; then
   exit 1
 fi
 
-# read first line (trim space)
+# read first line
 APP_FILE=$(head -n 1 "$INI_FILE" | tr -d '\r\n' | xargs)
 
 # check empty
