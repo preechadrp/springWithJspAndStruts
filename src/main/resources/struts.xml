@@ -12,7 +12,7 @@
     <package name="default" namespace="/" extends="struts-default">
 
 
-		<action name="index" class="com.example.springWithJspAndStruts.action.HelloAction">
+		<action name="index" class="com.example.springWithJspAndStruts.action.IndexAction">
             <result name="success">/WEB-INF/jsp/index.jsp</result>
         </action>
         

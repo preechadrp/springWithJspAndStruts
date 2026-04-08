@@ -14,9 +14,9 @@ public class StrutsConfig {
         FilterRegistrationBean<Filter> bean = new FilterRegistrationBean<>();
         bean.setFilter(new org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter());
         
-        bean.addUrlPatterns("/*");
+        //bean.addUrlPatterns("/*");
         //or ดักเฉพาะ .do เท่านั้น
-        //bean.addUrlPatterns("*.do");
+        bean.addUrlPatterns("*.do");
         //bean.addUrlPatterns("*.do", "*.action"); //กรณีหลายอัน
         
         bean.setOrder(1);
