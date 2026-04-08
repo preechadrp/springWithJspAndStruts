@@ -6,16 +6,28 @@
 
 	<!-- เปลี่ยน extension ถ้าไม่ใส่จะ default เป็น action -->
     <constant name="struts.action.extension" value="do"/>
+    <constant name="struts.mapper.alwaysSelectFullNamespace" value="true"/>
+    <constant name="struts.parameters.requireAnnotations" value="false"/>
     <!-- กรณีแบบหลายนามสกุล -->
     <!-- <constant name="struts.action.extension" value="do,action"/> -->
     
     <package name="default" namespace="/" extends="struts-default">
 
-
-		<action name="index" class="com.example.springWithJspAndStruts.action.IndexAction">
-            <result name="success">/WEB-INF/jsp/index.jsp</result>
-        </action>
-        
-
-    </package>
+	    <!-- หน้าแรก -->
+	    <action name="index" class="com.example.springWithJspAndStruts.action.IndexAction">
+	        <result name="success">/WEB-INF/jsp/index.jsp</result>
+	    </action>
+	
+	    <!-- ไปหน้า form -->
+	    <action name="input" class="com.example.springWithJspAndStruts.action.IndexAction">
+	        <result name="success">/WEB-INF/jsp/input.jsp</result>
+	    </action>
+	
+	    <!-- รับค่าฟอร์ม -->
+	    <action name="submit" class="com.example.springWithJspAndStruts.action.SubmitAction">
+	    	<interceptor-ref name="defaultStack"/>
+	        <result name="success">/WEB-INF/jsp/index.jsp</result>
+	    </action>
+	
+	</package>
 </struts>
