@@ -25,6 +25,7 @@
 	
 	    <!-- รับค่าฟอร์ม -->
 	    <action name="submit" class="com.example.springWithJspAndStruts.action.SubmitAction">
+	    	<!-- <interceptor-ref name="defaultStack"/> ไม่ต้องใส่เพราะ package นี้ extends="struts-default" -->
 	        <result name="success">/WEB-INF/jsp/index.jsp</result>
 	    </action>
 	
