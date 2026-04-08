@@ -11,9 +11,11 @@
     
     <package name="default" namespace="/" extends="struts-default">
 
-        <action name="hello" class="com.example.springWithJspAndStruts.action.HelloAction">
-            <result name="success">/WEB-INF/jsp/hello.jsp</result>
+
+		<action name="index" class="com.example.springWithJspAndStruts.action.HelloAction">
+            <result name="success">/WEB-INF/jsp/index.jsp</result>
         </action>
+        
 
     </package>
 </struts>
