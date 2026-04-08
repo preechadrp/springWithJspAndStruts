@@ -25,7 +25,6 @@
 	
 	    <!-- รับค่าฟอร์ม -->
 	    <action name="submit" class="com.example.springWithJspAndStruts.action.SubmitAction">
-	    	<interceptor-ref name="defaultStack"/>
 	        <result name="success">/WEB-INF/jsp/index.jsp</result>
 	    </action>
 	
